@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แผนที่นำทางในโรงพยาบาล</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+</head>
+<body>
+    <h1>แผนที่นำทางในโรงพยาบาล</h1>
+
+    <!-- เมนูเลือกจุดต้นทางและปลายทาง -->
+    <div class="controls">
+        <label for="start-point">เลือกจุดต้นทาง:</label>
+        <select id="start-point">
+            <option value="SkyWalk">Sky Walk</option>
+            <option value="SriPathGate">ประตูศรีพัฒน์</option>
+        </select>
+
+        <label for="end-point">เลือกจุดปลายทาง:</label>
+        <select id="end-point">
+            <option value="OPD9">OPD 9</option>
+            <option value="OPD101">OPD 101</option>
+            <option value="OPD2">OPD 2</option>
+            <option value="OPD110">OPD 110</option>
+            <option value="BloodRoom">ห้องเจาะเลือด</option>
+            <option value="XRay33">ห้อง X-RAY เบอร์ 33</option>
+            <option value="XRay34">ห้อง X-RAY เบอร์ 34</option>
+        </select>
+
+        <button onclick="startNavigation()">เริ่มนำทาง</button>
+    </div>
+
+    <!-- พื้นที่แสดงแผนที่ -->
+    <div id="map"></div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Maharaj Nakorn Chiang Mai Hospital Map</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
